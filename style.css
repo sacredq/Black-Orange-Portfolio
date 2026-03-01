@@ -4,7 +4,7 @@
 }
 
 body{
-    width: 100%; height: 100vh; background: #000000; overflow: hidden; color: #fff;
+    width: 100%; height: 100vh; background: #000000; color: #fff;
 }
 
 .Top_bar{
@@ -33,7 +33,7 @@ nav a{
 }
 
 .info_section{
-    display: flex; justify-content: center; align-items: center;
+    display: flex; justify-content: space-evenly; align-items: center;
 }
 
 .main_info{
@@ -46,7 +46,9 @@ nav a{
 
 .portf_image{
     border-radius: 50%; cursor: pointer;
-    width: 70%; height: 80%;
+    width: 100%; height: 100%;
+    max-width: 50vw; max-height: 35vw;
+    object-fit: cover;
 }
 
 .text{
@@ -54,15 +56,15 @@ nav a{
 }
 
 .text h1{
-    font-size: 64px;
+    font-size: 2rem;
 }
 
 .text h3{
-    font-size: 30px;
+    font-size: 1.5rem; padding-top: 8px;
 }
 
 .text p{
-    font-size: 16px; font-weight: 500; padding-top: 10px; 
+    font-size: 1rem; font-weight: 500; padding-top: 10px; 
 }
 
 .soc_media{
@@ -91,4 +93,58 @@ nav a{
 .button:hover{
     color: black; background: #b74b4b; box-shadow: 0  0 25px #b74b4b;
     transform: scale(1.05);
+}
+
+/* EDITTED */
+
+.dots-bar{
+    display: none;
+}
+
+
+@media(max-width: 767px){
+    .dots-bar{
+        display: block; font-size: 22px;
+    }
+
+    .info_section{
+        display: flex; flex-direction: column;
+    }
+
+    .portf_image{
+        display: flex; justify-content: center;
+        width: 100%; height: 100%;
+        max-width: 55vw; max-height: 50vh;
+    }
+
+    .main_info{
+        display: flex; flex-direction: column;
+        justify-content: center; padding-top: 3rem;
+    }
+
+    .text{
+        display: flex; justify-content: center;
+        flex-direction: column;
+        max-width: 80vw;
+    }
+
+    .text p{
+        font-size: 14px;
+    }
+
+    #navBar{
+        display: none; flex-direction: column;
+        text-align: left;
+        align-items: flex-start;
+        position: fixed; right: 0; top: 8vh;
+        transition: all 0.3s;
+    }
+
+    .activeBar{
+        display: flex; flex-direction: column;
+    }
+
+    #navBar a{
+        font-size: 14px; 
+    }
 }
