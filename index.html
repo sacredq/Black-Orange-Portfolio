@@ -2,17 +2,18 @@
 <html>
     <head>
         <title>Portfolio Website</title>
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel = "stylesheet" href = "style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
-        <div class = "Top_bar">
+        <div data-aos="zoom-in" class = "Top_bar">
             <div class = "Logo">
                 <a href = "#">Alex</a>
             </div>
 
-            <nav>
+            <nav id = "navBar">
                 <a class = "active" href = "#">Home</a>
                 <a href = "#">Services</a>
                 <a href = "#">Skills</a>
@@ -20,10 +21,14 @@
                 <a href = "#">Experience</a>
                 <a href = "#">Contact</a>
             </nav>
+
+            <div class = "dots-bar">
+                <i id = "icon-bar" class="fa-solid fa-bars"></i>
+            </div>
         </div>
 
         <main>
-            <section class = "info_section">
+            <section data-aos="zoom-in" class = "info_section">
                 <div class = "image_container"> 
                     <img class = "portf_image" src = "images/main.jpg">
                 </div>
@@ -57,5 +62,7 @@
                 </div>
             </section>
         </main>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script src = "main.js"></script>
     </body>
 </html>
